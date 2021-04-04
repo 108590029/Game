@@ -1,5 +1,5 @@
 var MyGame = Framework.Class(Framework.Level , {
-    
+
     load: function() {
 
         //0 空地  1牆壁  2空木箱  3增加炸彈木箱  4增加威力木箱  -1增加炸彈數  -2增加炸彈power
@@ -22,7 +22,7 @@ var MyGame = Framework.Class(Framework.Level , {
     },
 
     initialize: function() {
-        
+
         this.map.init();
         this.map.setPlayerPosition({x:4,y:4});
         this.map.addMonster({x:4, y:7});
@@ -31,7 +31,7 @@ var MyGame = Framework.Class(Framework.Level , {
         this.map.addMonster({x:14, y:6});
     },
 
-    update: function() {     
+    update: function() {
         this.map.update();
     },
 
@@ -39,11 +39,11 @@ var MyGame = Framework.Class(Framework.Level , {
         //this.rootScene.draw();
         //可支援畫各種單純的圖形和字
         this.map.draw(parentCtx);
-        
+
     },
 
     keydown:function(e, list){
-        
+
         Framework.DebugInfo.Log.warning(e.key);
 
         this.map.keydown(e, list);
@@ -55,12 +55,12 @@ var MyGame = Framework.Class(Framework.Level , {
                 Framework.Game.exitFullScreen();
                 this.isFullScreen = false;
             }
-            
+
         }
     },
 
     keyup:function(e, list){
-        
+
         this.map.keyup(e, list);
     },
 
@@ -70,7 +70,7 @@ var MyGame = Framework.Class(Framework.Level , {
         this.click(e[0]);
     },
 
-    click: function (e) {  
-        
+    click: function (e) {
+
     },
 });

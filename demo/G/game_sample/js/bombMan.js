@@ -2,12 +2,12 @@
 //目前Class寫法都是以function的方式
 //只要是this.XXX皆會是Public的property
 var BombMan = function(file, options) {
-    this.url = file;      
-    //AnimationSprite當圖片是一整張圖片(連續圖), 而非Array時一定要給col, row三個(url是一定要的)   
-    this.sprite = new Framework.AnimationSprite({url:this.url, col:3 , row:4 , loop:true , speed:12}); 
+    this.url = file;
+    //AnimationSprite當圖片是一整張圖片(連續圖), 而非Array時一定要給col, row三個(url是一定要的)
+    this.sprite = new Framework.AnimationSprite({url:this.url, col:4 , row:4 , loop:true , speed:12});
     this.sprite.scale = 2;
     this.sprite.index = 1;
-    var PIXEL_CONST = 64;
+    var PIXEL_CONST = 128;
     //this.sprite.start({ from: 0, to: 2, loop: true});
     this.mapPosition = {x:0, y:0};
     this.spritePosition = {x:0, y:0};
@@ -135,4 +135,4 @@ Object.defineProperty(BombMan.prototype, 'position', {
         this.mapPosition = newValue;
         this.spritePosition = {x:this.mapPosition.x * 64, y: this.mapPosition.y * 64};
     }
-}); 
+});

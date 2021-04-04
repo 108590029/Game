@@ -13,10 +13,10 @@ var MyMenu = Framework.exClass(Framework.GameMainMenu , {
     loadingProgress: function(ctx, requestInfo) {
         //console.log(Framework.ResourceManager.getFinishedRequestPercent())
         this.loading.draw(ctx);
-        ctx.font ='90px Arial';
-        ctx.textAlign = 'center';
-        ctx.fillStyle = 'white';
-        ctx.fillText(Math.round(requestInfo.percent) + '%' , ctx.canvas.width / 2 , ctx.canvas.height / 2 + 300);
+        // ctx.font ='90px Arial';
+        // ctx.textAlign = 'center';
+        // ctx.fillStyle = 'white';
+        // ctx.fillText(Math.round(requestInfo.percent) + '%' , ctx.canvas.width / 2 , ctx.canvas.height / 2 + 300);
     },
 
     load: function() {
@@ -54,11 +54,11 @@ var MyMenu = Framework.exClass(Framework.GameMainMenu , {
         this.menu.draw(parentCtx);
         //this.rootScene.draw();
         //可支援畫各種單純的圖形和字
-        parentCtx.font = '65pt bold';
-        parentCtx.fillStyle = 'black';
-        parentCtx.textBaseline = 'top';
-        parentCtx.textAlign = 'center';
-        parentCtx.fillText('Click To Start', this.rectPosition.x + 130, this.rectPosition.y, 260);
+        // parentCtx.font = '65pt bold';
+        // parentCtx.fillStyle = 'black';
+        // parentCtx.textBaseline = 'top';
+        // parentCtx.textAlign = 'center';
+        // parentCtx.fillText('Click To Start', this.rectPosition.x + 130, this.rectPosition.y, 260);
     },
 
     mouseup: function(e) {
